@@ -173,6 +173,8 @@ class Test_Console_help(unittest.TestCase):
             self.assertFalse(HBNBCommand().onecmd("create State"))
             self.assertLess(0, len(output.getvalue().strip()))
             testKey = "State.{}".format(output.getvalue().strip())
-            self.assertIn(testKey, storage.all().keys())    
+            self.assertIn(testKey, storage.all().keys())
+
+
 if __name__ == "__main__":
     unittest.main()
